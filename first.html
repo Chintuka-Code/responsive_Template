@@ -38,6 +38,7 @@
         </div>
       </div>
       <!-- Slider End -->
+
       <!-- New Product Text -->
       <div class="upperText">
         <h1>New <span class="orange"> Product</span></h1>
@@ -50,32 +51,37 @@
       <!-- NEw Product -->
       <div class="newProduct">
         <!-- First Product -->
-        <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
-          <h3>
-            My First Book
-          </h3>
-          <ul class="price">
-            <li><span>$786</span></li>
-            <li><del>$800</del></li>
-          </ul>
-          <ul class="icon">
-            <li class="wishlist">
-              <i class="fa fa-heartbeat" aria-hidden="true"></i>
-            </li>
-            <li class="cart">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </li>
-            <li class="quickview">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </li>
-          </ul>
+        <div
+          *ngFor="let c of science_details$ | async | slice: 0:8"
+          class="col-3"
+        >
+          <div class="product">
+            <img src="http://localhost:8899/images/{{ c.image }}" alt="" />
+            <h3>
+              {{ c.name }}
+            </h3>
+            <ul class="price">
+              <li><span>$786</span></li>
+              <li><del>$800</del></li>
+            </ul>
+            <ul class="icon">
+              <li class="wishlist">
+                <i class="fa fa-heartbeat" aria-hidden="true"></i>
+              </li>
+              <li class="cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </li>
+              <li class="quickview">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- First Product End -->
 
         <!-- Second Product start -->
         <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
           <h3>
             Second Book
           </h3>
@@ -93,7 +99,7 @@
 
         <!-- Third Product Start -->
         <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
           <h3>
             My Third Book
           </h3>
@@ -111,7 +117,7 @@
 
         <!-- Fourt Product start-->
         <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
           <h3>
             My Fourth Book
           </h3>
@@ -142,6 +148,7 @@
       <!-- Subscriber End -->
 
       <!-- Another Product -->
+
       <div class="upperText another">
         <h1>All <span class="orange"> Product</span></h1>
         <p>
@@ -153,7 +160,7 @@
       <div class="newProduct">
         <!-- First Product -->
         <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
           <h3>
             My First Book
           </h3>
@@ -177,7 +184,7 @@
 
         <!-- Second Product start -->
         <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
           <h3>
             Second Book
           </h3>
@@ -195,7 +202,7 @@
 
         <!-- Third Product Start -->
         <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
           <h3>
             My Third Book
           </h3>
@@ -213,7 +220,7 @@
 
         <!-- Fourt Product start-->
         <div class="product">
-          <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" />
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
           <h3>
             My Fourth Book
           </h3>
@@ -229,6 +236,7 @@
         </div>
         <!-- Fourt Product End -->
       </div>
+
       <!--Another Product End -->
     </main>
     <script src="./Index.js"></script>

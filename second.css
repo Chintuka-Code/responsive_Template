@@ -1,0 +1,249 @@
+/* Global Style start */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.font {
+  font: 16px;
+  font-weight: 400;
+  color: black;
+}
+.orange {
+  color: #e59285;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #212529;
+}
+h3 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+}
+img {
+  cursor: pointer;
+}
+i {
+  pointer-events: none;
+}
+/* Global CLass End */
+
+/* Custom Style  */
+.wrapper {
+  width: 95%;
+  margin: 3rem auto 3rem auto;
+  padding: 0.5rem;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.categorySection {
+  min-width: 20%;
+  margin: 0rem 0rem 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+}
+.categorySection > h1 {
+  font-size: 18px;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+  transition: all 250ms ease-in;
+}
+.categorySection > h1 > i {
+  margin-left: 0.5rem;
+}
+.categorySection > h1:hover,
+.categorySection > h1:hover > .categorySection > h1 > i {
+  color: #e59285;
+}
+.categorySection > ul {
+  opacity: 0;
+  height: 0;
+  transition: all 250ms ease-in-out;
+}
+.categorySection > ul > li {
+  min-height: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  visibility: hidden;
+  border-bottom: 1px dotted grey;
+
+  transition: all 250ms ease-in-out;
+}
+.categorySection > ul > li:hover > a {
+  color: #e59285;
+}
+.categorySection > ul > li:hover {
+  border-bottom: 1px solid #e59285;
+}
+
+.showProduct {
+  opacity: 1 !important;
+  height: auto !important;
+}
+
+.showProduct > li {
+  min-height: 50px !important ;
+  visibility: visible !important;
+}
+
+.bookSection {
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bookSection > h3 {
+  align-self: flex-start;
+  margin: 0rem 0rem 1rem 1rem;
+}
+.bookdetails {
+  width: 80%;
+}
+.book {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  position: relative;
+}
+.book > img {
+  width: 100%;
+  min-height: 300px;
+}
+.book > h3 {
+  margin: 1rem 0rem 1rem 0rem;
+}
+.icon {
+  width: calc(100% - 2rem);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 1%;
+  padding: 1rem;
+}
+.icon > li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  background-color: #eee;
+}
+.icon > li:nth-child(1) {
+  transform: translateY(10px);
+  transition: all 200ms ease-in-out;
+}
+.icon > li:nth-child(2) {
+  transform: translateY(15px);
+  transition: all 150ms ease-in-out;
+  transition-delay: 50ms;
+}
+.icon > li:nth-child(3) {
+  transform: translateY(20px);
+  transition: all 200ms ease-in-out;
+  transition-delay: 120ms;
+}
+.icon > li > i {
+  font-size: 20px;
+  color: rgb(70, 66, 66);
+}
+.book:hover {
+  border: 1px solid #e59285;
+}
+.book:hover > .icon {
+  background-color: white;
+}
+.book:hover > .icon > li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.icon > li:hover i {
+  color: rgb(238, 232, 232);
+}
+.icon > li:hover {
+  background-color: #e59285;
+}
+/* Medium Device  tablet */
+@media screen and (min-width: 700px) {
+  .main {
+    flex-direction: row;
+  }
+  .categorySection {
+    min-width: 30%;
+  }
+  .categorySection > h1 {
+    font-size: 20px;
+  }
+  .categorySection > ul {
+    opacity: 1;
+    height: auto;
+  }
+  .categorySection > ul > li {
+    min-height: 50px;
+    visibility: visible;
+  }
+  .categorySection > h1 > i {
+    display: none;
+  }
+  .bookdetails {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+  }
+  .bookSection > h3 {
+    margin: 0rem 0rem 1rem 3rem;
+  }
+}
+
+/* Laptops */
+@media screen and (min-width: 1200px) {
+  .categorySection {
+    min-width: 20%;
+  }
+  .categorySection > h1 {
+    font-size: 24px;
+  }
+  .bookdetails {
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
