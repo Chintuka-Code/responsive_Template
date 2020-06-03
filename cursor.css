@@ -1,0 +1,20 @@
+body {
+  cursor: none;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+}
+
+section > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transform-origin: 100%, 100%;
+  background-color: green;
+}

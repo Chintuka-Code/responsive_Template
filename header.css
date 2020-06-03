@@ -63,6 +63,7 @@ header {
   align-items: center;
   padding: 1rem 0.5rem 1rem 0.5rem;
   position: relative;
+  background-color: #fff;
   transition: all 400ms ease-in-out;
 }
 
@@ -94,7 +95,8 @@ nav > ul > li > a {
 }
 .profile > ul > li > i:hover,
 nav > ul > li > a:hover,
-.hambarger:hover {
+.hambarger:hover,
+.sticky > nav > ul > li > a:hover {
   color: #e59285;
 }
 
