@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global CLass Start */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.font {
+  font: 16px;
+  font-weight: 400;
+  color: black;
+}
+.orange {
+  color: #e59285;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #212529;
+}
+h3 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+}
+img {
+  cursor: pointer;
+}
+i {
+  pointer-events: none;
+}
+/* Global End */
+
+/* Custom Start */
+
+header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  position: relative;
+  transition: all 400ms ease-in-out;
+}
+
+header > img {
+  width: 80px;
+}
+header > nav {
+  width: 0;
+  visibility: hidden;
+  transition: all 300ms ease-in-out;
+}
+.profile {
+  width: 65%;
+}
+.profile > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav > ul > li > a {
+  font-size: 18px;
+}
+.profile > ul > li > i,
+.hambarger {
+  pointer-events: stroke;
+  cursor: pointer;
+  font-size: 20px;
+}
+.profile > ul > li > i:hover,
+nav > ul > li > a:hover,
+.hambarger:hover {
+  color: #e59285;
+}
+
+.showbar {
+  position: absolute;
+  top: 60px;
+  width: 100% !important;
+  background-color: rgb(53, 52, 52);
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  visibility: visible !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.showbar > ul > li {
+  margin-bottom: 1rem;
+}
+.showbar > ul > li > a {
+  color: rgb(207, 204, 204);
+}
+.showbar > ul > li:hover > .showbar > ul > li > a {
+  color: #e59285;
+}
+.sticky {
+  position: fixed;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+.sticky > nav > ul > li > a {
+  color: white;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    margin: 1rem 0rem 1rem 0rem;
+  }
+  header > img {
+    width: auto;
+  }
+  nav {
+    width: 60% !important;
+    visibility: visible !important;
+    margin-left: 0;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .profile {
+    width: 15%;
+  }
+  .sticky {
+    margin-top: 0rem;
+  }
+  .hambarger {
+    width: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    width: 70% !important;
+    margin-left: 2rem;
+  }
+  .profile {
+    width: 30%;
+  }
+}
