@@ -1,0 +1,35 @@
+.svg {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 10%;
+}
+
+.svg2 {
+  position: absolute;
+  top: 25%;
+}
+
+.circle {
+  r: 100;
+  cx: 100;
+  cy: 100;
+  stroke: green;
+  stroke-width: 2px;
+  fill: hotpink;
+}
+
+.polyline {
+}
+
+polyline {
+  stroke-width: 2;
+  stroke: red;
+  fill: white;
+}
+
+path {
+  fill: white;
+  stroke: red;
+  stroke-width: 2;
+}

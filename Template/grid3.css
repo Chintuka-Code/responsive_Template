@@ -1,0 +1,23 @@
+section {
+  display: grid;
+  grid-template-areas:
+    'one one two'
+    'three fourth two';
+
+  grid-auto-rows: minmax(250px, 1fr);
+}
+
+section > div:nth-child(1) {
+  grid-area: one;
+}
+section > div:nth-child(2) {
+  grid-area: two;
+  background-color: red;
+}
+section > div:nth-child(3) {
+  grid-area: three;
+}
+section > div:nth-child(4) {
+  grid-area: fourth;
+  background-color: green;
+}

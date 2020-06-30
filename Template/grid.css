@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 200px;
+}
+
+section > div:nth-child(odd) {
+  background-color: red;
+  justify-items: center;
+  align-items: center;
+}

@@ -16,5 +16,5 @@ section > div {
   transform: translate(-50%, -50%);
   pointer-events: none;
   transform-origin: 100%, 100%;
-  background-color: green;
+  border: 1px solid black;
 }
