@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  min-height: 500px;
+  background-color: rgb(245, 236, 236);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  border: 1px solid grey;
+}
+
+.atm {
+  width: 350px;
+  min-height: 160px;
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  perspective: 1000px;
+  border-radius: 8px;
+}
+.atm > .frontAtm,
+.atm > .backAtm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 800ms ease-out;
+  background-image: linear-gradient(
+    to right,
+    #ff8a35,
+    #ff8e3c,
+    #ff9242,
+    #ff9549,
+    #ff994f,
+    #fb954b,
+    #f79148,
+    #f38d44,
+    #ea8036,
+    #e17227,
+    #d76516,
+    #ce5700
+  );
+  border-radius: 8px;
+}
+.frontAtm {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+.frontAtm > .upperText {
+  display: flex;
+  align-items: center;
+}
+.upperText > .logo {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #fdfdfc;
+  text-transform: capitalize;
+}
+.upperText > h3 {
+  color: #fdfdfc;
+  flex: 1;
+}
+.upperText > .visa {
+  color: #fdfdfc;
+}
+
+.frontAtm > img {
+  width: 50px;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+.frontAtm > p {
+  font: 18px;
+  text-align: center;
+}
+.frontAtm > .bottomText {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  color: #fdfdfc;
+  text-transform: capitalize;
+}
+.frontAtm > .bottomText > h3:first-child {
+  flex: 1;
+  max-width: 80%;
+}
+.frontAtm > .bottomText > h3:last-child {
+  text-transform: capitalize;
+}
+.backAtm {
+  transform: rotateY(180deg);
+}
+
+.backAtm > .black {
+  width: 100%;
+  height: 35px;
+  margin-top: 1rem;
+  background-color: black;
+}
+.backAtm > .cvv {
+  text-align: center;
+  color: #fdfdfc;
+  font-size: 22px;
+  margin-top: 0.3rem;
+}
+.backAtm > h3 {
+  font-size: 16px;
+  color: #fdfdfc;
+  padding: 0rem 0.5rem;
+}
+.backAtm > .term {
+  font-size: 12px;
+  padding: 0.2rem 0.5rem 1rem 0.5rem;
+  color: #fdfdfc;
+}
+.rotate {
+  transform: rotateY(360deg);
+}
+.atmForm {
+  margin-top: 25%;
+}
+
+.formFeild > input,
+input[type='button'] {
+  display: block;
+  margin: 0.5rem 0rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid grey;
+  font-size: 18px;
+  outline-color: rgb(88, 121, 228);
+}
+
+.dates {
+  margin-top: 1rem;
+}
+.dates > ul {
+  display: flex;
+  margin: 0.5rem 0rem;
+  list-style: none;
+}
+.dates > ul > li > div > input {
+  width: 90%;
+}
+.dates > ul > li:last-child > div > input {
+  margin-left: 0.5rem;
+}
+
+input[type='button'] {
+  background-color: rgb(66, 66, 228);
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.size {
+  font-size: 22px;
+}

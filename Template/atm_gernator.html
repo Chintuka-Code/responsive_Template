@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atm-Gernator</title>
+    <link rel="stylesheet" href="./atm_gernator.css" />
+  </head>
+  <body>
+    <section>
+      <div class="atm">
+        <div class="frontAtm">
+          <div class="upperText">
+            <h1 class="logo">C</h1>
+            <h3>Chintu Ka Code</h3>
+            <h1 class="visa">VISA</h1>
+          </div>
+          <img src="../Assets1/icon/chip.png" alt="" />
+          <p>XXXX XXXX XXXX XXXX</p>
+          <div class="bottomText">
+            <h3>Mohmad Sabban</h3>
+            <h3>2020/01</h3>
+          </div>
+        </div>
+
+        <div class="backAtm">
+          <div class="black"></div>
+          <p class="cvv">123</p>
+          <h3>Authorised Signature</h3>
+          <p class="term">
+            ATM card is issued free of cost to customers. Also no charges are
+            levied for transactions made through the ATM. However, the Bank
+            reserves the right to charge fees for the ATM facilities in future
+            with prior intimation to customers.
+          </p>
+        </div>
+      </div>
+
+      <div class="atmForm">
+        <form>
+          <div class="formFeild">
+            <label>Card Number</label>
+            <input
+              type="text"
+              placeholder="Enter Card Number"
+              onkeyup="getInput(event)"
+              data="cardnumber"
+              minlength="8"
+              maxlength="16"
+            />
+          </div>
+          <div class="formFeild">
+            <label>Card Name</label>
+            <input
+              type="text"
+              placeholder="Enter Card Number"
+              data="cardname"
+              onkeyup="getInput(event)"
+            />
+          </div>
+
+          <div class="dates">
+            <label>Expiration Date</label>
+            <ul>
+              <li>
+                <div class="formFeild">
+                  <label>Month & Year</label>
+                  <input
+                    type="month"
+                    placeholder="Enter Card Number"
+                    data="month"
+                    onkeyup="getInput(event)"
+                    onchange="getInput(event)"
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="formFeild">
+                  <label>CVV</label>
+                  <input
+                    type="text"
+                    placeholder="Enter CVV"
+                    onkeyup="getInput(event)"
+                    maxlength="4"
+                    data="cvv"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <input type="button" value="Submit" data="submit" onclick="get()" />
+        </form>
+      </div>
+    </section>
+
+    <script src="./atm_gernator.js"></script>
+  </body>
+</html>
